@@ -1,0 +1,29 @@
+#product{
+    height: 180px;
+}
+
+img{
+    margin-top: 0px;
+    height: 100px;
+}
+
+h4{
+    color: rgb(50, 126, 158);;
+}
+
+.c:hover {
+    transform: scale(1.2);
+    transition: 200ms linear;
+  }
+
+
+.p:hover{
+    transform: scale(1.1);
+    transition: 200ms linear;
+    
+  }
+
+button:hover{
+    transform: scale(1.1);
+    transition: 200ms linear;
+}

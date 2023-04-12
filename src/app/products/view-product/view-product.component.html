@@ -1,0 +1,32 @@
+ <!-- Product section-->
+ <section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{productData.productImage}}" alt="..." /></div>
+            <div class="col-md-6">
+                <!-- <div class="small mb-1">SKU: BST-498</div> -->
+                <h1 class="display-5 fw-bolder">{{productData.productName}}</h1>
+                <div class="fs-5 mb-2">
+                    <h4>{{productData.price}}</h4>
+                </div>
+                <div class="p-1" style="width: 60px; height: 30px; background-color:  rgb(52, 107, 183); border-radius: 5px;"><h6 class="text-white">{{productData.rating}} <i style="color: rgb(251, 251, 251);" class="fa-solid fa-star"></i></h6></div>
+                
+                <p class="lead mt-3">{{productData.description}}</p>
+
+                <div><p class="lead mt-3">Reviews: {{productData.review}}</p></div>
+                <div><p class="lead mt-3">Vendor Name : {{productData.vendorName}}</p></div>
+
+                <a href="products/update_product/{{productData.id}}"><button class="mt-2 b"> Edit</button></a>
+                <a href="products/delete_product/{{productData.id}}"><button class="mt-2 ms-3 b">Delete</button></a>
+                
+                <!-- <div class="d-flex mt-2">
+                    
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to cart
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>

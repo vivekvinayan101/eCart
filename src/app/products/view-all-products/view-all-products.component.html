@@ -1,0 +1,51 @@
+<div class="container mt-4 w-100">
+   
+<div class="container d-flex row">
+    <h4 class="text-center">Major Brands</h4>
+    <div class="container text-center col-md-2 col-sm-2 p-4 c" ><a (click)="filter('1')"><img src="https://i.postimg.cc/t4pbxk3v/hp-sees-strong-growth-in-enterprise-segment.jpg" alt="hp"></a></div>
+    <div class="container text-center col-md-2 col-sm-2 p-4 c" ><a (click)="filter('5')"><img src="https://i.postimg.cc/GtwV13zg/dell.jpg" alt="dell"></a></div>
+    <div class="container text-center col-md-2 col-sm-2 p-4 c" ><a (click)="filter('3')"><img src="https://i.postimg.cc/SKt79ZMW/acer-logo-editorial-logo-free-vector.jpg" alt="acer"></a></div>
+    <div class="container text-center col-md-2 col-sm-2 p-4 c" ><a (click)="filter('4')"><img style="width:150px" src="https://i.postimg.cc/J08yHJPN/91059.jpg" alt="asus"></a></div>
+    <div class="container text-center col-md-2 col-sm-2 p-4 c" ><a (click)="filter('6')"><img src="https://i.postimg.cc/PrBgW4mn/apple-preview.jpg" alt="apple"></a></div>
+    <div class="container text-center col-md-2 col-sm-2 p-4 c" ><a (click)="filter('2')"><img style="width: 150px; height: 60px;" src="https://i.postimg.cc/VLbTkC2G/RS38280-Lenovo-Logo-POS-Red.png" alt="lenovo"></a></div>
+
+</div>
+</div>
+
+<div class="container text-center mt-5">
+    <button style="color:white; background-color:  rgb(50, 126, 158); height: 40px; width: 150px; border-radius: 5px; border: 2px solid rgb(50, 126, 158);" type="submit" (click)="filter('')">
+    <h6>View All Products</h6></button></div>
+
+<!-- Section-->
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            
+            <div *ngFor="let i of filterProducts | filter:searchKey:'productName' " class="col mb-5">
+                <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" class="card h-100 p">
+                    <div class="badge text-white position-absolute "  style= "top: 0.5rem; right: 0.5rem; background-color: rgb(83, 195, 83);">{{i.isAvailable}}</div>
+                    <!-- Product image-->
+                    <img class="card-img-top mt-3 p-2" id="product" src="{{i.productImage}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4" >
+                        <div class="text-center container">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.productName}}</h5>
+                            <!-- Product price-->
+                            <h6>{{i.price}}</h6>
+                            <p class="container text-center text-light" style="width: 70px; background-color:  rgb(52, 107, 183); border-radius: 5px;">{{i.rating}} <i style="color: rgb(251, 251, 251);" class="fa-solid fa-star"></i></p>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="view_product/{{i.id}}">View options</a></div>
+                    </div>
+                </div>
+            </div>
+           
+           
+        </div>
+    </div>
+</section>

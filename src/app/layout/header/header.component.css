@@ -1,0 +1,10 @@
+a{
+    color: rgb(50, 126, 158);
+}
+#cart{
+    border: 2px solid rgb(50, 126, 158);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}
+

@@ -1,0 +1,12 @@
+img{
+    width: 350px;
+    height: 250px;
+}
+
+.b{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color:white ;
+    border: 2px solid rgb(50, 126, 158);
+}
